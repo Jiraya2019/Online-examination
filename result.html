@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Exam Result</h1>
+
+<div class="box">
+    <h2 id="name"></h2>
+    <p id="score"></p>
+    <p id="status"></p>
+</div>
+
+<script>
+let name = localStorage.getItem("student");
+let score = localStorage.getItem("score");
+
+document.getElementById("name").innerText = "Student: " + name;
+document.getElementById("score").innerText = "Score: " + score + "/5";
+
+document.getElementById("status").innerText =
+(score >= 3) ? "Status: PASS ✅" : "Status: FAIL ❌";
+</script>
+
+</body>
+</html>
